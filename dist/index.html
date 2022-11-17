@@ -1,0 +1,71 @@
+<html><head>
+	<title>DigitalJs+ (Just DigitalJS's JSON to DigitalJS)</title>
+	<script
+			src="https://code.jquery.com/jquery-3.6.1.js"
+			integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+			crossorigin="anonymous"></script>
+<script defer src="bundle.js" charset="UTF-8"></script></head><body>
+	<h1>DigitalJs+ (lo Firrtl to DigitalJS)</h1>
+  <div>
+    <div style="margin-bottom: 5px;">
+      <input type="file" id="files_json" style="display: none" onChange="imports_json()"/>
+      <input type="button" id="imports_json" style="height: 36px;width: 120px;color: white;background: #1E90FF;font-size: 16px;border-radius: 4px;border-width: 0px;" value="import .firrtl/.fir" />
+<!--      <input type="button" id="sim_json" style="height: 36px;width: 120px;color: white;background: #1E90FF;font-size: 16px;border-radius: 4px;border-width: 0px;" value="synthesis" />-->
+		<input type="button" id="writeFirrtl" style="height: 36px;width: 120px;color: white;background: #1E90FF;font-size: 16px;border-radius: 4px;border-width: 0px;" value="synthesis" />
+    </div>
+  </div>
+  <div><textarea id="output" style="width: 100%; height: 500px"></textarea></div>
+	<div>
+			<button name="start" type="button">▶️</button>
+			<button name="stop" type="button">⏹️</button>
+	</div>
+	<div id="paper">
+	</div>
+	<div>
+			<input name="fixed" type="checkbox">Fixed Mode</input>
+			<button name="json" type="button">Serialize and Reload</button>
+			<input name="layout" type="checkbox">Include layout information</button>
+	</div>
+	<div>
+			<button name="ppt_up" type="button">+</button><button name="ppt_down">-</button><button name="left">&lt;</button><button name="right">&gt;</button><button name="live">live</button>
+	</div>
+	<div id="monitor">
+	</div>
+	<div id="iopanel">
+	</div>
+<script>
+	$('#writeFirrtl').click(() => {
+		console.log("writeFirrtl");
+		var path = require('path');
+		var fs = require("fs");
+		var dirname = require('./util.js').dirname;
+		console.log(dirname)
+		fs.writeFile('./input.firrtl', document.getElementById('output').value,  function(err) {
+			if (err) {
+				return console.error(err);
+			}
+		});
+		var exec = require('child_process').exec, child;
+		//var jar_path = dirname + '/jdk-19/bin/java.exe'
+		var jar_path = 'java'
+		child = exec(jar_path + ' -jar ./firrtl2digitaljs.jar -o result.json ./input.firrtl',
+				function (error, stdout, stderr){
+					console.log('stdout: ' + stdout);
+					console.log('stderr: ' + stderr);
+					if(error !== null){
+						console.log('exec error: ' + error);
+					}
+					fs.readFile('./result.json', 'utf8', (err, data) => {
+						if (err) {
+							console.error(err);
+							return;
+						}
+						console.log(data);
+						var json_data = JSON.parse(data)
+						console.log(json_data)
+						loadCircuit(json_data)
+					});
+				});
+	})
+</script>
+</body></html>

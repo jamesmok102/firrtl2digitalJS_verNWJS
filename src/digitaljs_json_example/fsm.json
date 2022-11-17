@@ -1,0 +1,658 @@
+{
+    "devices": {
+        "dev0": {
+            "type": "Input",
+            "net": "clk",
+            "order": 0,
+            "bits": 1
+        },
+        "dev1": {
+            "type": "Input",
+            "net": "rst",
+            "order": 1,
+            "bits": 1
+        },
+        "dev2": {
+            "type": "Input",
+            "net": "a",
+            "order": 2,
+            "bits": 1
+        },
+        "dev3": {
+            "type": "Output",
+            "net": "b",
+            "order": 3,
+            "bits": 1
+        },
+        "dev4": {
+            "label": "$procdff$84",
+            "type": "Dff",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 12,
+                        "column": 3
+                    },
+                    "to": {
+                        "line": 19,
+                        "column": 12
+                    }
+                }
+            ],
+            "bits": 2,
+            "polarity": {
+                "clock": true,
+                "arst": true
+            },
+            "arst_value": "01"
+        },
+        "dev5": {
+            "label": "$procmux$68",
+            "type": "Mux",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 26,
+                        "column": 14
+                    },
+                    "to": {
+                        "line": 26,
+                        "column": 15
+                    }
+                },
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 26,
+                        "column": 10
+                    },
+                    "to": {
+                        "line": 26,
+                        "column": 35
+                    }
+                }
+            ],
+            "bits": {
+                "in": 1,
+                "sel": 1
+            }
+        },
+        "dev6": {
+            "label": "$procmux$70",
+            "type": "Mux",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 0,
+                        "column": 0
+                    },
+                    "to": {
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 23,
+                        "column": 12
+                    },
+                    "to": {
+                        "line": 27,
+                        "column": 12
+                    }
+                }
+            ],
+            "bits": {
+                "in": 1,
+                "sel": 1
+            }
+        },
+        "dev16": {
+            "label": "$procmux$79",
+            "type": "Mux",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 17,
+                        "column": 14
+                    },
+                    "to": {
+                        "line": 17,
+                        "column": 15
+                    }
+                },
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 17,
+                        "column": 10
+                    },
+                    "to": {
+                        "line": 17,
+                        "column": 45
+                    }
+                }
+            ],
+            "bits": {
+                "in": 2,
+                "sel": 1
+            }
+        },
+        "dev23": {
+            "type": "Constant",
+            "constant": "0"
+        },
+        "dev24": {
+            "type": "Constant",
+            "constant": "1"
+        },
+        "dev25": {
+            "type": "Constant",
+            "constant": "x"
+        },
+        "dev29": {
+            "type": "Constant",
+            "constant": "00"
+        },
+        "dev30": {
+            "type": "Constant",
+            "constant": "01"
+        },
+        "dev31": {
+            "type": "Constant",
+            "constant": "0"
+        },
+        "dev32": {
+            "type": "Constant",
+            "constant": "1"
+        },
+        "dev37": {
+            "type": "Constant",
+            "constant": "10"
+        },
+        "dev39": {
+            "type": "Constant",
+            "constant": "11"
+        },
+        "dev41": {
+            "type": "Constant",
+            "constant": "11"
+        },
+        "dev7": {
+            "label": "$procmux$71_CMP0",
+            "type": "EqConst",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 0,
+                        "column": 0
+                    },
+                    "to": {
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 23,
+                        "column": 12
+                    },
+                    "to": {
+                        "line": 27,
+                        "column": 12
+                    }
+                }
+            ],
+            "bits": {
+                "in": 2
+            },
+            "signed": {
+                "in": false
+            },
+            "leftOp": false,
+            "constant": 2
+        },
+        "dev8": {
+            "label": "$procmux$72",
+            "type": "Mux",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 0,
+                        "column": 0
+                    },
+                    "to": {
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 23,
+                        "column": 12
+                    },
+                    "to": {
+                        "line": 27,
+                        "column": 12
+                    }
+                }
+            ],
+            "bits": {
+                "in": 1,
+                "sel": 2
+            }
+        },
+        "dev14": {
+            "label": "$procmux$76",
+            "type": "Mux",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 0,
+                        "column": 0
+                    },
+                    "to": {
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 14,
+                        "column": 17
+                    },
+                    "to": {
+                        "line": 19,
+                        "column": 12
+                    }
+                }
+            ],
+            "bits": {
+                "in": 2,
+                "sel": 2
+            }
+        }
+    },
+    "connectors": [
+        {
+            "to": {
+                "id": "dev4",
+                "port": "clk"
+            },
+            "from": {
+                "id": "dev0",
+                "port": "out"
+            },
+            "name": "clk",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 2,
+                        "column": 18
+                    },
+                    "to": {
+                        "line": 2,
+                        "column": 21
+                    }
+                }
+            ]
+        },
+        {
+            "to": {
+                "id": "dev4",
+                "port": "arst"
+            },
+            "from": {
+                "id": "dev1",
+                "port": "out"
+            },
+            "name": "rst",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 2,
+                        "column": 23
+                    },
+                    "to": {
+                        "line": 2,
+                        "column": 26
+                    }
+                }
+            ]
+        },
+        {
+            "to": {
+                "id": "dev5",
+                "port": "sel"
+            },
+            "from": {
+                "id": "dev2",
+                "port": "out"
+            },
+            "name": "a",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 2,
+                        "column": 28
+                    },
+                    "to": {
+                        "line": 2,
+                        "column": 29
+                    }
+                }
+            ]
+        },
+        {
+            "to": {
+                "id": "dev16",
+                "port": "sel"
+            },
+            "from": {
+                "id": "dev2",
+                "port": "out"
+            },
+            "name": "a",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 2,
+                        "column": 28
+                    },
+                    "to": {
+                        "line": 2,
+                        "column": 29
+                    }
+                }
+            ]
+        },
+        {
+            "to": {
+                "id": "dev5",
+                "port": "in0"
+            },
+            "from": {
+                "id": "dev23",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev5",
+                "port": "in1"
+            },
+            "from": {
+                "id": "dev24",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev6",
+                "port": "in1"
+            },
+            "from": {
+                "id": "dev5",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev6",
+                "port": "in0"
+            },
+            "from": {
+                "id": "dev25",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev16",
+                "port": "in1"
+            },
+            "from": {
+                "id": "dev41",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev16",
+                "port": "in0"
+            },
+            "from": {
+                "id": "dev30",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev6",
+                "port": "sel"
+            },
+            "from": {
+                "id": "dev7",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "to": {
+                "id": "dev7",
+                "port": "in"
+            },
+            "from": {
+                "id": "dev4",
+                "port": "out"
+            },
+            "name": "state",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 5,
+                        "column": 15
+                    },
+                    "to": {
+                        "line": 5,
+                        "column": 20
+                    }
+                }
+            ]
+        },
+        {
+            "from": {
+                "id": "dev4",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev8",
+                "port": "sel"
+            },
+            "name": "state",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 5,
+                        "column": 15
+                    },
+                    "to": {
+                        "line": 5,
+                        "column": 20
+                    }
+                }
+            ]
+        },
+        {
+            "to": {
+                "id": "dev3",
+                "port": "in"
+            },
+            "from": {
+                "id": "dev8",
+                "port": "out"
+            },
+            "name": "b",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 2,
+                        "column": 44
+                    },
+                    "to": {
+                        "line": 2,
+                        "column": 45
+                    }
+                }
+            ]
+        },
+        {
+            "from": {
+                "id": "dev31",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev8",
+                "port": "in0"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev32",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev8",
+                "port": "in1"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev6",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev8",
+                "port": "in2"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev31",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev8",
+                "port": "in3"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev4",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev14",
+                "port": "sel"
+            },
+            "name": "state",
+            "source_positions": [
+                {
+                    "name": "fsm.sv",
+                    "from": {
+                        "line": 5,
+                        "column": 15
+                    },
+                    "to": {
+                        "line": 5,
+                        "column": 20
+                    }
+                }
+            ]
+        },
+        {
+            "to": {
+                "id": "dev4",
+                "port": "in"
+            },
+            "from": {
+                "id": "dev14",
+                "port": "out"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev37",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev14",
+                "port": "in0"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev39",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev14",
+                "port": "in1"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev16",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev14",
+                "port": "in2"
+            },
+            "source_positions": []
+        },
+        {
+            "from": {
+                "id": "dev29",
+                "port": "out"
+            },
+            "to": {
+                "id": "dev14",
+                "port": "in3"
+            },
+            "source_positions": []
+        }
+    ],
+    "subcircuits": {}
+}
