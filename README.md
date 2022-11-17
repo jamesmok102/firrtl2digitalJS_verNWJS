@@ -1,5 +1,9 @@
 # firrtl2digitalJS_verNWJS
 
+我把项目里的java环境和nwjs的文件夹删掉，太大传不上去
+所需环境：java8以上，java8不能运行，会提示版本过低，我用的是jdk-19
+nwjs下载：https://nwjs.io/downloads/
+
 # 初始化
 如果项目里没有node_modules文件夹的话，需要npm install
 
