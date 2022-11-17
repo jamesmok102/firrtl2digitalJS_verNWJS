@@ -4,6 +4,11 @@
 所需环境：java8以上，java8不能运行，会提示版本过低，我用的是jdk-19
 nwjs下载：https://nwjs.io/downloads/
 
+# 如何使用
+
+然后把dist打包成压缩档，用nwjs-sdk-v0.70.1-win-x64里面的nw.exe打开刚才的dist压缩档
+用命令打开 nw.exe .\firrtl2digitaljs.zip
+
 # 初始化
 如果项目里没有node_modules文件夹的话，需要npm install
 
@@ -31,7 +36,6 @@ var jar_path = 'java'
 
 # 如何打包
 然后把dist打包成压缩档，用nwjs-sdk-v0.70.1-win-x64里面的nw.exe打开刚才的dist压缩档
-我这里已经把压缩过的档案(dist)放在nwjs-sdk-v0.70.1-win-x64中并改名为firrtl2digitaljs.zip
 用命令打开 nw.exe .\firrtl2digitaljs.zip
 如果要打包出exe档，使用命令copy /b nw.exe+myapp.nw app.exe，以后还需要打开的话，要在nwjs-sdk-v0.70.1-win-x64的文件夹下才能打开
 要完全打包的话就要把nwjs-sdk-v0.70.1-win-x64也要打包进去
